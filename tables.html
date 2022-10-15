@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>ArpDevs Admin</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/dataTables.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="sidebar-nav sidebar accordion" id="accordionSidebar">
+                <li class="nav-item profile">
+                    <div class="profile-info">
+                        <div class="profile-item">
+                            <div class="profile-img"></div>
+                            <div class="profile-text">
+                                <h5>Aiandra Alves</h5>
+                                <span>FullStack</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="material-icons">dashboard</i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed collapse-item" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="material-icons">settings</i>
+                        <span>Components</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Components:</h6>
+                            <a class="collapse-item" href="singin.html">Login</a>
+                            <a class="collapse-item" href="singup.html">Register</a>
+                            <a class="collapse-item" href="fotget.html">Forget</a>
+                            <a class="collapse-item" href="optin.html">Optin</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        <i class="material-icons">person</i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="material-icons">insights</i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tables.html">
+                        <i class="material-icons">list_alt</i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="notifications.html">
+                        <i class="material-icons">notifications_active</i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="mt-4 text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+                
+            </ul>
+
+            <div class="container-wrapper">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-top navbar-expand border-bottom">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none mr-3">
+                        <i class="material-icons">menu</i>
+                    </button>
+
+                    <a class="sidebar-brand d-flex" href="#">
+                        <div class="brand-logo">
+                            <img src="assets/img/logo.png" alt="mascote">
+                        </div>
+                        <div class="brand-text mx-3">ArpDevs</div>
+                    </a>
+
+                    <ul class="navbar-nav align-items-center ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="nav-info align-items-center">
+                                    <span class="avatar"></span>
+                                    <div class="nav-text d-none d-lg-block">
+                                        <span>Aiandra Alves</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="material-icons">logout</i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content mb-3">
+
+                    <!-- Header -->
+                    <div class="header">
+                        <ul class="header-bread">
+                            <li>
+                                <h3>
+                                    <i class="material-icons">list_alt</i>
+                                    Tabela
+                                </h3>
+                                <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                                    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                        <li class="breadcrumb-item"><a class="active" href="#">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Tabela</a></li>
+                                    </ol>
+                                </nav>
+                            </li><!-- end col -->
+                        </ul>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-12 grid-margin">
+                            <div class="card">
+                                <div class="card-header mb-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h6>Tabela</h6>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <a href="#" class="btn btn-sm bg-success">Cadastrar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table " id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>Nome</th>
+                                                    <th>Telefone</th>
+                                                    <th>E-mail</th>
+                                                    <th>Data</th>
+                                                    <th>Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <span>Pedro Sousa</span>
+                                                    </td>
+                                                    <td>(77) 98873-1965</td>
+                                                    <td>pedro.sousa@gmail.com</td>
+                                                    <td>04/05/2021</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#editModal" class="btn btn-sm bg-outline-warning mr-1">
+                                                            <i class="material-icons">edit_note</i>
+                                                        </button>
+                                                        <button data-toggle="modal" data-target="#deleteModal" class="btn btn-sm bg-outline-danger">
+                                                            <i class="material-icons">delete</i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                        <span>Aiandra Alves</span>
+                                                    </td>
+                                                    <td>(77) 98873-1965</td>
+                                                    <td>aiandralves@gmail.com</td>
+                                                    <td>04/05/2021</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#editModal" class="btn btn-sm bg-outline-warning mr-1">
+                                                            <i class="material-icons">edit_note</i>
+                                                        </button>
+                                                        <button data-toggle="modal" data-target="#deleteModal" class="btn btn-sm bg-outline-danger">
+                                                            <i class="material-icons">delete</i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                        <span>Robson Pires</span>
+                                                    </td>
+                                                    <td>(77) 98873-1965</td>
+                                                    <td>robson.pires@gmail.com</td>
+                                                    <td>04/05/2021</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#editModal" class="btn btn-sm bg-outline-warning mr-1">
+                                                            <i class="material-icons">edit_note</i>
+                                                        </button>
+                                                        <button data-toggle="modal" data-target="#deleteModal" class="btn btn-sm bg-outline-danger">
+                                                            <i class="material-icons">delete</i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end content -->
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>
+                                &copy; Copyright 
+                                <script>document.write(new Date().getFullYear());</script> 
+                                <a href="www.arpdevs.com.br">
+                                    <img src="assets/img/mascote.png" width="17" alt="mascote" class="mb-1 ml-1">
+                                    ArdDevs Tecnologia
+                                </a> 
+                                | Todos os Direitos Reservados
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+
+            </div><!-- end container-wrapper -->
+
+        </div><!-- end wrapper -->
+
+        <!-- Delete Modal-->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modalLogout" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDelete">Deletar</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Selecione "Confirmar" abaixo se você estiver pronto para deletar o arquivo atual.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-sm bg-danger" type="button" data-dismiss="modal">Cancelar</button>
+                        <a class="btn btn-sm bg-success" href="#">Confirmar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Modal -->
+        <div class="modal fade mt-4" id="editModal" tabindex="-1" role="dialog" aria-labelledby="modalEdit" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEdit">Deseja editar o arquivo?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-div">
+                                        <input type="text" class="form-input" placeholder=" ">
+                                        <label class="form-label">Nome</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-div">
+                                        <input type="text" class="form-input" placeholder=" ">
+                                        <label class="form-label">Telefone</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-div">
+                                        <input type="email" class="form-input" placeholder=" ">
+                                        <label class="form-label">E-mail</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-sm btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+        <script src="assets/js/jquery.dataTables.min.js"></script>
+        <script src="assets/js/dataTables.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('#dataTable').DataTable();
+            });
+        </script>
+    </body>
+</html>

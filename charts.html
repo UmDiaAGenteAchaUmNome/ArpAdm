@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>ArpDevs Admin</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="sidebar-nav sidebar accordion" id="accordionSidebar">
+                <li class="nav-item profile">
+                    <div class="profile-info">
+                        <div class="profile-item">
+                            <div class="profile-img"></div>
+                            <div class="profile-text">
+                                <h5>Aiandra Alves</h5>
+                                <span>FullStack</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="material-icons">dashboard</i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed collapse-item" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="material-icons">settings</i>
+                        <span>Components</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Components:</h6>
+                            <a class="collapse-item" href="singin.html">Login</a>
+                            <a class="collapse-item" href="singup.html">Register</a>
+                            <a class="collapse-item" href="fotget.html">Forget</a>
+                            <a class="collapse-item" href="optin.html">Optin</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        <i class="material-icons">person</i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="material-icons">insights</i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tables.html">
+                        <i class="material-icons">list_alt</i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="notifications.html">
+                        <i class="material-icons">notifications_active</i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="mt-4 text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+                
+            </ul>
+
+            <div class="container-wrapper">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-top navbar-expand border-bottom">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none mr-3">
+                        <i class="material-icons">menu</i>
+                    </button>
+
+                    <a class="sidebar-brand d-flex" href="#">
+                        <div class="brand-logo">
+                            <img src="assets/img/logo.png" alt="mascote">
+                        </div>
+                        <div class="brand-text mx-3">ArpDevs</div>
+                    </a>
+
+                    <ul class="navbar-nav align-items-center ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="nav-info align-items-center">
+                                    <span class="avatar"></span>
+                                    <div class="nav-text d-none d-lg-block">
+                                        <span>Aiandra Alves</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                    <i class="material-icons">person</i>
+                                    <span>Profile</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="material-icons">logout</i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content mb-3">
+
+                    <!-- Header -->
+                    <div class="header">
+                        <ul class="header-bread">
+                            <li>
+                                <h3>
+                                    <i class="material-icons">insights</i>
+                                    Charts
+                                </h3>
+                                <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                                    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                        <li class="breadcrumb-item"><a class="active" href="#">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Charts</a></li>
+                                    </ol>
+                                </nav>
+                            </li><!-- end col -->
+                        </ul>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-xl-8 col-lg-7">
+
+                            <!-- Area Chart -->
+                            <div class="card chart shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6>Area Chart</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                            <!-- Bar Chart -->
+                            <div class="card chart shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6>Bar Chart</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-bar">
+                                        <canvas id="myBarChart"></canvas>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Donut Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card chart shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6>Donut Chart</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end content -->
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>
+                                &copy; Copyright 
+                                <script>document.write(new Date().getFullYear());</script> 
+                                <a href="www.arpdevs.com.br">
+                                    <img src="assets/img/mascote.png" width="17" alt="mascote" class="mb-1 ml-1">
+                                    ArdDevs Tecnologia
+                                </a> 
+                                | Todos os Direitos Reservados
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+
+            </div><!-- end container-wrapper -->
+
+        </div><!-- end wrapper -->
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+        <script src="assets/js/Chart.min.js"></script>
+        <script src="assets/js/demo/chart-area-demo.js"></script>
+        <script src="assets/js/demo/chart-pie-demo.js"></script>
+        <script src="assets/js/demo/chart-bar-demo.js"></script>
+    </body>
+</html>
